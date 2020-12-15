@@ -43,7 +43,7 @@ dateToday.innerHTML = `${day}, ${month} ${date}, ${year}`;
 currentTime.innerHTML = `${hour}:${minutes}`;
 
 function displayCity(city) {
-  let apiKey = "039935d9f096c3e0803fd56649519a0c";
+  let apiKey = "976b89f445ce6f533868a11eba113753";
   let units = "metric";
   let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=${units}`;
 
@@ -79,6 +79,12 @@ function displayTemp(response) {
   );
   document.querySelector("#low").innerHTML = Math.round(
     response.data.main.temp_min
+  );
+  
+  let weatherIcon = document.querySelector("#weather-icon");
+  weatherIcon.setAttribute(
+    "src",
+    `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
   );
 }
 
