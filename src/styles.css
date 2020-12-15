@@ -94,9 +94,10 @@ footer {
   margin-left: 20px;
 }
 
-.weather-emoji {
+.weather-icon {
   font-size: 120px;
-  margin-left: 5%;
+  margin-left: 0%;
+  width: 200px;
 }
 
 .inner-wrapper {
