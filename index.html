@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
-    <link rel="stylesheet" href="src/styles.css">
+    <link rel="stylesheet" href="./src/styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Play&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/82107c986e.js" crossorigin="anonymous"></script>
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
@@ -31,12 +31,15 @@
       </div>
       <div class="current-weather">
           <h1 class="city" id="city"></h1>
-          <h2 class="date"></h2>
-          <h3 class="time"></h3>
+          <h2 class="date" id="date"></h2>
+          <h3 class="time" id="time"></h3>
           <div class="forecast-today">
             <span class="weather-icon"> <img src="http://openweathermap.org/img/wn/10d@2x.png" class="weather-icon" id="weather-icon"></span>
-            <span class="temp" id="temperature"></span>
-            <span class="units">°C</span>
+            <span class="temp" id="temp"></span>
+            <span class="units">
+              <a href="#" id="celsius">°C</a> | 
+              <a href="#" id="fahrenheit">°F</a>
+            </span>
             <span class="today-weather" id="description"></span>
             <span class="feels-like">Feels like: <span id="feels-like"></span>°</span>
             <br>
@@ -52,81 +55,13 @@
                 </div>
                 <div class="col wind">
                   <p>🌬️</p> 
-                  <span id="wind"></span> mph
+                  <span id="wind"></span> km/h
                 </div>
               </div>
             </div>
           </div>
       </div>
-          <div class="next-5">
-            <p class="sub-heading">Next 5 Days</p>
-            <div class="row friday">
-              <div class="col-4">
-                <p class="day-otw">Friday</p>
-              </div>
-              <div class="col-4">
-                <p class="h-l"><strong>45°</strong>/33°</p>
-              </div>
-              <div class="col-4 emoji">
-                🌧
-                <br>
-                <div class="weather-descr">Showers</div>
-              </div>
-            </div>
-            <div class="row saturday">
-              <div class="col-4">
-                <p class="day-otw">Saturday</p>
-              </div>
-              <div class="col-4">
-                <p class="h-l"><strong>50°</strong>/43°</p> 
-              </div>
-              <div class="col-4 emoji">
-                🌤 
-                <br>
-                <div class="weather-descr">Sunny</div>
-              </div>
-            </div>
-            <div class="row sunday">
-              <div class="col-4">
-                <p class="day-otw">Sunday</p>
-              </div>
-              <div class="col-4">
-                <p class="h-l"><strong>50°</strong>/33°</p>
-              </div>
-              <div class="col-4 emoji">
-                🌧
-                <br>
-                <div class="weather-descr">Showers</div>
-              </div>
-            </div>
-            <div class="row monday">
-              <div class="col-4">
-                <p class="day-otw">Monday</p>
-              </div>
-              <div class="col-4">
-                <p class="h-l"><strong>42°</strong>/36°</p>
-              </div>
-              <div class="col-4 emoji">
-                ⛅
-                <br />
-                <div class="weather-descr">Partly cloudy</div>
-              </div>
-            </div>
-            <div class="row tuesday">
-              <div class="col-4">
-                <p class="day-otw">Tuesday</p>
-              </div>
-              <div class="col-4">
-                <p class="h-l"><strong>51°</strong>/41°</p>
-              </div>
-              <div class="col-4 emoji">
-                ⛅ 
-                <br>
-                <div class="weather-descr">Partly cloudy</div>
-              </div>
-            </div>
-          </div>
-          <footer><a href="https://github.com/karyraquell/weather-app">Open-source code</a> by Karina Palomeque&#169</footer>
+      <footer><a href="https://github.com/karyraquell/weather-app">Open-source code</a> by Karina Palomeque&#169</footer>
     </div>
     <script src="./src/script.js"></script>
 </body>
